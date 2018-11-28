@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+<!--    <Properties>
+        <Property name="log-dir">${sys:cache-path}/logs</Property>
+    </Properties>-->
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n" />
+        </Console>
+        
+<!--        <RollingFile name="AuditFile" fileName="${log-dir}/audit.txt"
+                     filePattern="${log-dir}/audit-%d{yyyy-MM-dd}.gz" >
+            <PatternLayout pattern="%d{HH:mm:ss} %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+            <DefaultRolloverStrategy max="4"/>
+        </RollingFile>
+        <RollingFile name="RollingFile" fileName="${log-dir}/logs.txt"
+                     filePattern="${log-dir}/logs-%d{yyyy-MM-dd}.gz" >
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level [%t] %logger{36} - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+            <DefaultRolloverStrategy max="4"/>
+        </RollingFile>-->
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <!--<AppenderRef ref="RollingFile"/>-->
+        </Root>
+<!--        <Logger name="AUDIT" level="debug" additivity="false">
+            <AppenderRef ref="AuditFile" level="debug"/>
+        </Logger>-->
+    </Loggers>
+        
+</Configuration>
